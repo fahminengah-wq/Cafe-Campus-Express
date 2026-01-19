@@ -1,3 +1,5 @@
+@section('title', 'admin layout - Campus Cafe Express')
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,4 @@
+@ title - layout for app campus express
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,22 +128,3 @@
     </footer>
 </body>
 </html>
-@guest
-    <a href="/login" class="text-gray-700 hover:text-green-600">Login</a>
-    <a href="/admin/login" class="text-gray-700 hover:text-green-600">Admin Login</a>
-    <a href="/register" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">
-        Register
-    </a>
-@else
-    @if(Auth::user()->isAdmin())
-        <a href="/admin/dashboard" class="text-gray-700 hover:text-green-600">
-            <i class="fas fa-cog mr-1"></i> Admin Panel
-        </a>
-    @endif
-    <span class="text-gray-700">Welcome, {{ Auth::user()->name }}</span>
-    <a href="/profile" class="text-gray-700 hover:text-green-600">Profile</a>
-    <form action="/logout" method="POST" class="inline">
-        @csrf
-        <button type="submit" class="text-gray-700 hover:text-green-600">Logout</button>
-    </form>
-@endguest

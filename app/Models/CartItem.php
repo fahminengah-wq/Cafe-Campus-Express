@@ -14,6 +14,7 @@ class CartItem extends Model
         'food_item_id',
         'quantity',
         'price',
+        'subtotal',
     ];
 
     protected $casts = [
